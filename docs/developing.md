@@ -20,7 +20,7 @@ Welcome, developer! This guide will help you set up a local environment, underst
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/youruser/mastopi.git
+git clone https://github.com/beitmenotyou-com/mastopi.git
 cd mastopi
 ```
 
