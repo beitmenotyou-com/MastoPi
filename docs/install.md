@@ -52,7 +52,7 @@ docker-compose up --build
 ```
 
 ### 4. Access Your Instance
-- Open `http://your-domain.com` in your browser.
+- Open `http://your-domain.com or pi IP address` in your browser.
 - The onboarding wizard will guide you through domain, email, federation, and admin setup.
 
 ---
@@ -64,7 +64,7 @@ docker-compose up --build
    - From the YunoHost admin panel, search for "MastoPi" and install.
    - Or, use the command line:
      ```sh
-     yunohost app install https://github.com/youruser/mastopi_ynh
+     yunohost app install https://github.com/beitmenotyou-com/mastopi_ynh
      ```
 3. **Follow the web onboarding wizard** after install.
 
@@ -75,7 +75,7 @@ docker-compose up --build
 1. **Install dependencies:** Ruby, Node.js, PostgreSQL/SQLite, Redis (optional)
 2. **Clone the repo:**
    ```sh
-   git clone https://github.com/youruser/mastopi.git
+   git clone https://github.com/beitmenotyou-com/mastopi.git
    cd mastopi/backend
    ```
 3. **Install gems and JS packages:**
