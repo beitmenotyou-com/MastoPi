@@ -1,0 +1,10 @@
+<%= render 'onboarding/progress' %>
+<h1>Step 1: Set Up Your Custom Domain</h1>
+<p>Enter the domain you want to use for your MastoPi instance.</p>
+<%= form_with url: onboarding_path(step: 'domain'), method: :post do |f| %>
+  <div class="form-group">
+    <%= f.label :domain, "Domain" %>
+    <%= f.text_field :domain, required: true, class: "form-control", aria: { label: "Domain" } %>
+  </div>
+  <%= f.submit "Next", class: "button" %>
+<% end %>

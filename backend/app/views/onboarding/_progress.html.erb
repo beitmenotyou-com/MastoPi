@@ -1,0 +1,7 @@
+<nav class="onboarding-progress" aria-label="Onboarding Progress">
+  <ol>
+    <% OnboardingController::STEPS.each_with_index do |step, idx| %>
+      <li class="<%= 'active' if step == @step %>"><%= step.titleize %></li>
+    <% end %>
+  </ol>
+</nav>

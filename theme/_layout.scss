@@ -1,0 +1,91 @@
+// Custom layout overrides for Mastopi theme
+
+// --- Forms ---
+input,
+textarea,
+select {
+  border: 1px solid var(--bg-alt);
+  border-radius: 0.75em;
+  padding: 0.75em 1em;
+  background: var(--bg-default);
+  color: var(--text-primary);
+  font-size: 1em;
+  transition: border 0.2s;
+  &:focus {
+    border-color: var(--brand-primary);
+    outline: none;
+  }
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+// --- Modals ---
+.modal {
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--bg-default);
+  border-radius: 1.5em;
+  padding: 2em;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  min-width: 320px;
+  max-width: 90vw;
+}
+
+// --- Feed Items ---
+.feed-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.25em 0;
+  border-bottom: 1px solid var(--bg-alt);
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 1em;
+  }
+
+  .content {
+    flex: 1;
+    .username {
+      font-weight: bold;
+      color: var(--text-primary);
+    }
+    .timestamp {
+      color: var(--text-muted);
+      font-size: 0.9em;
+      margin-left: 0.5em;
+    }
+    .text {
+      margin: 0.5em 0;
+      color: var(--text-primary);
+    }
+    .actions {
+      display: flex;
+      gap: 1.5em;
+      .icon {
+        cursor: pointer;
+        color: var(--text-muted);
+        &:hover {
+          color: var(--brand-primary);
+        }
+      }
+    }
+  }
+}

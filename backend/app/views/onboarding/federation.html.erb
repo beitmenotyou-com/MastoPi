@@ -1,0 +1,15 @@
+<%= render 'onboarding/progress' %>
+<h1>Step 3: Test Federation</h1>
+<p>Test connectivity with another ActivityPub instance to ensure federation works.</p>
+<%= form_with url: onboarding_path(step: 'federation'), method: :post do |f| %>
+  <div class="form-group">
+    <%= f.label :remote_instance, "Remote Instance URL" %>
+    <%= f.text_field :remote_instance, required: true, class: "form-control", aria: { label: "Remote Instance URL" } %>
+  </div>
+  <%= f.submit "Test Federation", class: "button" %>
+<% end %>
+<% if @federation_status.present? %>
+  <div class="federation-status">
+    <strong>Status:</strong> <%= @federation_status %>
+  </div>
+<% end %>

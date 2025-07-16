@@ -1,0 +1,15 @@
+:root {
+  --brand-primary: #1d9bf0;
+  --brand-accent:  #f91880;
+  --bg-default:    #ffffff;
+  --bg-alt:        #f7f9fa;
+  --text-primary:  #0f1419;
+  --text-muted:    #536471;
+}
+
+[data-theme="dark"] {
+  --bg-default:   #000000;
+  --bg-alt:       #16181c;
+  --text-primary: #e7e9ea;
+  --text-muted:   #71767b;
+}

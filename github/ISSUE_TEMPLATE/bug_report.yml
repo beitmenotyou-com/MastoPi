@@ -1,0 +1,26 @@
+name: Bug report
+description: Report something that is not working as expected
+title: "[Bug] <brief description>"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe the issue clearly
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: MastoPi version
+      placeholder: e.g. 0.3.1
+    validations:
+      required: true

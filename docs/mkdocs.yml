@@ -1,0 +1,9 @@
+site_name: MastoPi Documentation
+nav:
+  - Home: index.md
+  - Install: install.md
+  - Upgrade: upgrade.md
+  - Theming: theming.md
+  - Developing: developing.md
+theme:
+  name: material

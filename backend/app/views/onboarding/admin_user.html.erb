@@ -1,0 +1,18 @@
+<%= render 'onboarding/progress' %>
+<h1>Step 4: Create Admin User</h1>
+<p>Create the first admin account for your MastoPi instance.</p>
+<%= form_with url: onboarding_path(step: 'admin_user'), method: :post do |f| %>
+  <div class="form-group">
+    <%= f.label :username, "Username" %>
+    <%= f.text_field :username, required: true, class: "form-control", aria: { label: "Username" } %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, "Email" %>
+    <%= f.email_field :email, required: true, class: "form-control", aria: { label: "Email" } %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, "Password" %>
+    <%= f.password_field :password, required: true, class: "form-control", aria: { label: "Password" } %>
+  </div>
+  <%= f.submit "Create Admin User", class: "button" %>
+<% end %>

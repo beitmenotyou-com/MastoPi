@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  nginx:
+    image: nginx:stable
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./certs:/etc/nginx/certs:ro
+    depends_on:
+      - rails
+    restart: unless-stopped
+
+  rails:
+    build: ../backend
+    env_file: ../.env
+    volumes:
+      - ../backend/public/system:/mastopi/public/system
+    restart: unless-stopped
+
+  sidekiq:
+    build: ../backend
+    command: bundle exec sidekiq
+    env_file: ../.env
+    depends_on:
+      - rails
+    restart: unless-stopped
+
+  saltyrtc:
+    image: saltyrtc/saltyrtc-server
+    env_file: ../.env
+    restart: unless-stopped
+
+  db:
+    image: postgres:16
+    env_file: ../.env
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  db_data:
