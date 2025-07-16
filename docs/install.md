@@ -33,7 +33,7 @@ Welcome to MastoPi! This guide will walk you through setting up your own lightwe
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/youruser/mastopi.git
+git clone https://github.com/beitmenotyou-com/mastopi.git
 cd mastopi
 ```
 
